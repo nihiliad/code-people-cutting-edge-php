@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Cutting-Edge PHP</title>
+
+    <meta name="description" content="Presentation to the UMN Code-People Group, November 7, 2013">
+    <meta name="author" content="David Naughton">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="revealjs/css/reveal.min.css">
+    <link rel="stylesheet" href="revealjs/css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="revealjs/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="revealjs/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Cutting-Edge PHP</h1>
+          <h3>UMN Code-People: November 7, 2013</h3>
+          <p>
+            <small>David Naughton: UMN Libraries Web Development</small>
+          </p>
+        </section>
+
+        <section>
+          <h1>Who Cares?</h1>
+        </section>
+
+        <section>
+          <h1>PHP Sucks</h1>
+          <div class="fragment">
+            <h3>PHP: a fractal of bad design</h3>
+            <a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/</a>
+          </div>
+        </section>
+
+        <section>
+          <h2>What about your Favorite Language?</h2>
+          <blockquote cite="http://www.stroustrup.com/blast.html">
+            &ldquo;There are only two kinds of programming languages: those people always bitch about and those nobody uses.&rdquo;
+          </blockquote>
+          <p> &mdash; <a href="http://www.stroustrup.com/blast.html">Bjarne Stroustrup</a></p>
+        </section>
+
+        <section>
+          <h2>"What are five things you hate about your favorite language?"</h2>
+          <blockquote cite="http://www.stackprinter.com/questions/what-are-five-things-you-hate-about-your-favorite-language.html">
+            &ldquo;If someone can't find five things to hate about his favorite tool, he doesn't know it well enough
+            to either advocate it or pull in the big dollars using it. He hasn't used it in enough different situations
+            to fully explore it. He's advocating it as a culture or religion, which means that if I don't choose his
+            favorite technology, I'm wrong.&rdquo;
+          </blockquote>
+          <p> &mdash; <a href="http://www.stackprinter.com/questions/what-are-five-things-you-hate-about-your-favorite-language.html">brian d foy</a></p>
+        </section>
+
+        <section>
+          <h2>"PHP Sucks! But I Like It!"</h2>
+          <blockquote cite="http://blog.ircmaxell.com/2012/04/php-sucks-but-i-like-it.html">
+            &ldquo;I actually agree with the majority of what he said in his post 
+            [<a href="http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/">PHP: a fractal of bad design</a>].
+            PHP <strong>is</strong> inconsistent. It <strong>is</strong> verbose. It does have a lot of weird behavior. It does have a lot of problems. It can be ugly.
+            It can be really awkward to work around. It can leave a lot to be desired... 
+            But it's also incredibly powerful.&rdquo;
+          </blockquote>
+          <p> &mdash; <a href="http://blog.ircmaxell.com/2012/04/php-sucks-but-i-like-it.html">Anthony Ferrara</a></p>
+        </section>
+
+        <section>
+          <h2>"PHP is much better than you think"</h2>
+          <blockquote cite="http://fabien.potencier.org/article/64/php-is-much-better-than-what-you-think">
+            &ldquo;PHP is probably not the best language out there, and I'm the first one to scream about its quirks, but <strong>PHP is the best web platform</strong>... ever.&rdquo;
+          </blockquote>
+          <p> &mdash; <a href="http://fabien.potencier.org/article/64/php-is-much-better-than-what-you-think">Fabien Potencier</a></p>
+          <p class="fragment">Not sure I agree with that last phrase, but the title is accurate for most of us.</p>
+        </section>
+
+        <section>
+          <h2>PHP History</h2>
+          <h3>Core Language</h3>
+          <ul>
+            <li class="fragment">1995: PHP 1.0</li>
+            <li class="fragment">2004: PHP 5.0
+              <ul><li>Radically-New <a href="http://www.php.net/manual/en/language.oop5.php">Object Model</a></li></ul>
+            </li>   
+            <li class="fragment">2009: PHP 5.3
+              <ul><li><a href="http://www.php.net/manual/en/language.namespaces.php">Namespaces</a>, <a href="http://php.net/manual/en/functions.anonymous.php">Lambdas and Closures</a>, ...</li></ul>
+            </li>
+            <li class="fragment">2012: PHP 5.4
+              <ul><li><a href="http://php.net/manual/en/language.oop5.traits.php">Traits</a>, <a href="http://php.net/manual/en/features.commandline.webserver.php">Built-in Web Server</a>, ...</li></ul>
+            </li>
+            <li class="fragment">2013: PHP 5.5
+              <ul><li><a href="http://www.php.net/manual/en/language.generators.php">Generators</a>, ...</li></ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>PHP History</h2>
+          <h3>Reusable Components</h3>
+          <ul>
+            <li class="fragment">1999: <a href="http://pear.php.net/">PEAR</a></li>
+            <li class="fragment">2011: <a href="http://getcomposer.org/">Composer</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <div><img style="border:none" height="214" width="428" alt="PEAR Logo" src="assets/pear-logo.png"></div>
+          <h1 class="fragment">SUCKS</h1>
+        </section>
+
+        <section>
+          <h1>PEAR Sucks</h1>
+          <h2>High Entry Barriers</h2>
+          <ul>
+            <li class="fragment">Draconion contribution standards enforced by a central committee.
+              <ul>
+                <li class="fragment">Few contributions to pear.php.net.</li>
+                <li class="fragment">Multiple, decentralized PEAR "channels".</li>
+                <li class="fragment">Can't find anything.</li>
+              </ul>
+            </li>
+            <li class="fragment">Originally built for system-wide installs, requiring root.</li>
+            <li class="fragment">Complex, poorly-documented system.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>PEAR Sucks</h1>
+          <h2>Package Counts</h2>
+          <!-- The CSS below centers the table. -->
+          <table style="margin-left:auto;margin-right:auto">
+            <tr class="fragment"><td>CPAN</td><td style="text-align:right"><a href="http://www.cpan.org/">127,119</a></td></tr>
+            <tr class="fragment"><td>RubyGems</td><td style="text-align:right"><a href="http://rubygems.org/stats">65,484</a></td></tr>
+            <tr class="fragment"><td>npm</td><td style="text-align:right"><a href="https://npmjs.org/">46,451</a></td></tr>
+            <tr class="fragment"><td>PyPI</td><td style="text-align:right"><a href="https://pypi.python.org/pypi">36,377</a></td></tr>
+            <tr class="fragment"><td>PEAR</td><td style="text-align:right"><a href="http://pear.php.net/package-stats.php">595</a></td></tr>
+          </table>
+        </section>
+
+        <section>
+          <h1>Composer</h1>
+          <div><img style="border:none" width="300" height="356" alt="Composer Logo" src="assets/logo-composer-transparent.png"></div>
+          <p><a href="http://getcomposer.org">http://getcomposer.org</a></p>
+        </section>
+
+        <section>
+          <h2>Composer</h2>
+          <blockquote cite="http://robloach.github.io/drupalcon2013/#/2/9">
+            &ldquo;I'd say until early 2012 it was pretty unusable, yet people used it. I guess that's how badly it was needed.&rdquo;
+          </blockquote>
+          <p> &mdash; <a href="http://robloach.github.io/drupalcon2013/#/2/9">Jordi Boggiano</a>, Composer Co-Creator</p>
+        </section>
+
+        <section>
+          <h2>Composer</h2>
+          <h3>Packages/versions over time</h3>
+          <div><img style="border:none" width="900" height="250" alt="Graph of Composer Packages/Versions Over Time" src="assets/composer-packages-over-time.png"></div>
+          <p>packagist.org: <a href="https://packagist.org/statistics">18,500</a> packages.</p>
+          <p>Almost doubled since April!</p>
+        </section>
+
+        <section>
+          <h2>Composer</h2>
+          <h3>Simpler and Easier</h3>
+          <ul>
+            <li>Low entry barriers to publishing on packagist.org.</li>
+            <li>Per-app package sets, similar to Ruby <a href="http://bundler.io/">Bundler</a>.</li>
+            <li>Simple JSON package metadata format, inspired by node.js <a href="https://npmjs.org/doc/files/package.json.html">npm</a>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Composer Quick Start</h2>
+          <p>After <a href="http://getcomposer.org/doc/00-intro.md">installing Composer</a>...</p>
+          <pre><code data-trim contenteditable>
+$ cd app-package-dir/
+$ vi composer.json
+          </code></pre>
+          <p>Declare a dependency:</p>
+          <pre><code class="json" data-trim contenteditable>
+{
+  "require": {
+    "guzzle/guzzle": "v3.7.4"
+  }
+}
+          </code></pre>
+          <p>Install it:</p>
+          <pre><code data-trim contenteditable>
+$ composer install
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Using Composer-Installed Packages</h2>
+          <p>Composer automatically generates a <a href="http://www.sitepoint.com/autoloading-and-the-psr-0-standard/">PSR-0-compliant autoloader</a>.</p>
+          <pre><code class="php" data-trim contenteditable>
+require 'app-package-dir/vendor/autoload.php';
+
+$client = new \Guzzle\Http\Client('http://guzzlephp.org');
+$request = $client->get('/');
+$response = $request->send();
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Composer and github.umn.edu</h2>
+          <pre><code class="json" data-trim contenteditable>
+{
+  "require": {
+    "umnlib/config": "*"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.umn.edu:Libraries/config-php.git"
+    }   
+  ]   
+}
+          </code></pre>
+          <p>(Composer can search multiple repository types for packages: packagist.org, github, PEAR...)</p> 
+        </section>
+
+        <section>
+          <h2>Who Cares?</h2>
+          <div class="fragment">
+            <blockquote cite="http://www.youtube.com/watch?v=HFIdQVDbhGk&feature=youtu.be">
+              &ldquo;PHP sucks at sharing... Sharing is how open source works. Sucking at sharing is how open source dies.&rdquo;
+            </blockquote>
+            <p> &mdash; Larry Garfield</p>
+            <p><small>Drupal core contributor, Drupal 8 Web Services Lead, Senior Architecht and Consultant at Palantir.net</small></p>
+            <p><a href="http://www.youtube.com/watch?v=HFIdQVDbhGk&feature=youtu.be">Composer: There's a Module (or Library) for That</a></p>
+            <p><small>DrupalCon Portland 2013</small></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>FIG</h2>
+          <h3><a href="http://www.php-fig.org/">PHP Framework Interop Group</a></h3>
+          <p><a href="https://github.com/php-fig/fig-standards">PHP Standard Requests</a>, e.g. PSR-0</a></p>
+          <p>Drupal, Symfony, almost all major projects participate.</p>
+        </section>
+
+        <section>
+          <h1>PHP Community and Ecosystem</h1>
+        </section>
+
+        <section>
+          <h1>Symfony</h1>
+          <ul>
+            <li><a href="http://symfony.com/">Symfony</a>: A cutting-edge PHP web framework.</a></li>
+            <li><a href="http://symfony.com/components">Symfony Components</a> can be used outside of Symfony, e.g. in <a href="http://symfony.com/blog/symfony2-meets-drupal-8">Drupal 8</a>.</li>
+            <li><a href="http://fabien.potencier.org/article/50/create-your-own-framework-on-top-of-the-symfony2-components-part-1">Create your own framework... on top of the Symfony2 Components</a>, by Fabien Potencier</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Testing</h1>
+          <ul>
+            <li><a href="https://github.com/sebastianbergmann/phpunit/">PHPUnit</a>, now available via <a href="http://phpunit.de/manual/current/en/installation.html#installation.composer">Composer</a>!</li>
+            <li>Behavior-Driven Development
+              <ul>
+                <li><a href="http://behat.org/">Behat</a> StoryBDD framework, inspired by Ruby <a href="http://cukes.info/">Cucumber</a>.</li>
+                <li><a href="http://www.phpspec.net/">PHPSpec</a> SpecBDD framework, inspired by Ruby <a href="http://rspec.info/">RSpec</a>.</li>
+                <li><a href="http://www.codeception.com/">Codeception</a> full-stack BDD testing framework.</li>
+              </ul>
+            </li>
+            <li><a href="https://github.com/padraic/mockery">Mockery</a> mock object framework can be integrated with PHPUnit or PHPSpec.</li>
+            <li><a href="https://github.com/phpspec/prophecy">Prophecy</a>, a highly-opinionated, very powerful and flexible mocking framework. Integrated with PHPSpec, can be used with PHPUnit.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>DocBlocks with PHPDoc</h2>
+          <p><a href="http://www.phpdoc.org/">phpDocumentor</a> has won, set the <a href="http://www.phpdoc.org/docs/latest/for-users/phpdoc-reference.html">PHPDoc standard</a>, and is now available via <a href="http://www.phpdoc.org/docs/latest/for-users/installation/using-composer.html">Composer</a>!</p>
+          <pre><code class="php" data-trim contenteditable>
+/**
+ * Short description.
+ *
+ * Long description. This text may contain
+ * multiple lines and even some _markdown_.
+ *
+ * * Markdown style lists function too
+ * * Just try this out once
+ *
+ * @param int    $example  Example function/method parameter description.
+ * @param string $example2 Second example.
+ */
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Annotations</h2>
+          <p>Define your own DocBlock annotations with the 
+          <a href="http://www.doctrine-project.org/">Doctrine</a> ORM's 
+          <a href="http://docs.doctrine-project.org/projects/doctrine-common/en/latest/reference/annotations.html">annotations</a> component:</p>
+          <pre><code class="php" data-trim contenteditable>
+namespace MyProject\Entities;
+
+use Doctrine\ORM\Mapping AS ORM;
+use Symfony\Component\Validation\Constraints AS Assert;
+
+/**
+ * @ORM\Entity
+ * @MyProject\Annotations\Foobarable
+ */
+class User {}
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>PHP Core Language</h1>
+        </section>
+
+        <section>
+          <h2>Metaprogramming</h2>
+          <ul>
+            <li><a href="http://php.net/manual/en/book.reflection.php">Reflection</a></li>
+            <li><a href="http://php.net/manual/en/language.oop5.magic.php">Magic Methods</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Lambdas</h2>
+          <p>...or <a href="http://php.net/manual/en/functions.anonymous.php">anonymous functions</a>, introduced in 5.3:</p>
+          <pre><code class="php" data-trim contenteditable>
+$input = array(1, 2, 3, 4, 5);
+$output = array_filter($input, function ($v) { return $v > 2; });
+
+// or...
+
+$max_comparator = function ($v) { return $v > 2; };
+$output = array_filter($input, $max_comparator);
+          </code></pre>
+          <div class="fragment">
+          <p>Don't use <a href="http://us3.php.net/create_function">create_function</a>!</p>
+          <pre><code class="php" data-trim contenteditable>
+$max_comparator = create_function('$v', 'return $v > 2;');
+          </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h2>Closures</h2>
+          <p>Lamdbas with state, i.e. anonymous functions that are "closed over" variables from the surrounding scope:</p>
+          <pre><code class="php" data-trim contenteditable>
+$x = 1;
+$incrementor = function() use (&$x) { return ++$x; }
+$incrementor(); // 2
+$incrementor(); // 3
+$incrementor(); // 4
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Functional Programming</h2>
+          <p>Lambdas and closures allow functional programming, even the infamous <a href="http://fabien.potencier.org/article/17/on-php-5-3-lambda-functions-and-closures">Y-Combinator</a>:
+          <pre><code class="php" data-trim contenteditable>
+function Y($F)
+{
+  $func = function ($f) { return $f($f); };
+ 
+  return $func(function ($f) use($F)
+  {
+    return $F(function ($x) use($f)
+    {
+      $ff = $f($f);
+ 
+      return $ff($x);
+    });
+  });
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Traits</h2>
+          <p>New in 5.4, <a href="http://php.net/manual/en/language.oop5.traits.php">traits</a> provide OO reuse without inheritance, like interfaces, but with implementation:</p>
+          <pre><code class="php" data-trim contenteditable>
+class Base {
+    public function sayHello() { echo 'Hello '; }
+}
+
+trait SayWorld {
+    public function sayHello() {
+        parent::sayHello();
+        echo 'World!';
+    }
+}
+
+class MyHelloWorld extends Base { use SayWorld; }
+$o = new MyHelloWorld();
+$o->sayHello(); // Hello World!
+          </code></pre>
+          <p class="fragment">For the theory, see <a href="http://scg.unibe.ch/research/traits">Traits - Composable Units of Behavior</a>.
+        </section>
+
+        <section>
+          <h2>Generators</h2>
+          <p>New in 5.5, <a href="http://blog.ircmaxell.com/2012/07/what-generators-can-do-for-you.html">generators</a> allow for very simple and easy implementation of iterators:</p>
+          <pre><code class="php" data-trim contenteditable>
+function fibonacci() {
+  $last = 0;
+  yield 0;
+  $current = 1;
+  yield 1;
+  while (true) {
+    $current = $last + $current;
+    $last = $current - $last;
+    yield $current;
+  }
+}
+
+// Prints the first sixteen Fibonacci numbers:
+foreach (fibonacci() as $n => $Fn) {
+  echo "F[$n] = $Fn\n";
+  if ($n == 15) break; // Prevent an infinite loop!
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Generators are Iterators</h2>
+          <p>An equivalent way to generate the Fibonacci numbers, by calling methods
+            from the Iterator interface, which Generator implements:
+          </p>
+          <pre><code class="php" data-trim contenteditable>
+$generator = fibonacci();
+$reflector = new ReflectionClass($generator);
+$reflector->getName(); // Generator
+$reflector->getInterfaceNames(); // Iterator, Traversable
+
+while ($generator->valid()) {
+  $n = $generator->key();
+  $Fn = $generator->current();
+  echo "F[$n] = $Fn\n";
+  if ($n == $limit) break; // Prevent an infinite loop!
+  $generator->next();
+}
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Further Reading</h2>
+          <p><a href="http://www.phptherightway.com/">PHP: The Right Way</a></p>
+        </section>
+
+        <section>
+          <h1>Thank You!</h2>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="revealjs/lib/js/head.min.js"></script>
+    <script src="revealjs/js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
